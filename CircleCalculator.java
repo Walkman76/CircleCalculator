@@ -32,6 +32,7 @@ public class CircleCalculator {
         //Source: https://www.w3schools.com/java/java_switch.asp
         
         switch (input) {
+	    //Calculates area and radius
             case 1:
             	System.out.print("Enter the perimeter of the cricle: ");
                 perimeter = scanner.nextDouble();
@@ -40,7 +41,8 @@ public class CircleCalculator {
                 diameter = radius * 2;
                 
                 break;
-            
+			
+            //Calculates perimeter and radius
             case 2:
                 System.out.print("Enter the area of the circle: ");
                 area = scanner.nextDouble();
@@ -48,7 +50,8 @@ public class CircleCalculator {
                 perimeter = 2 * Math.PI * radius;
                 diameter = radius * 2;
                 break;
-            
+
+	    //Calculates area and perimeter	
             case 3:
             	System.out.print("Enter the radius of the circle: ");
                 radius = scanner.nextDouble();
@@ -56,11 +59,12 @@ public class CircleCalculator {
                 area = Math.PI * radius * radius;
                 diameter = radius * 2;
                 break;
-            
+            //If user input is invalid
             default:
                 System.out.println("Invalid choice.");
         }
-        
+		
+        //Prints out the results rounded down to 3 decimals.
         System.out.println("Perimeter of the circle: " + fd.format(perimeter));
         System.out.println("Area of the circle: " + fd.format(area));
         System.out.println("Radius of the circle: " + fd.format(radius));
